@@ -67,7 +67,6 @@ envelope <- function(to = NULL,
     class = "envelope"
   ) %>%
     header_set("Date", http_date(Sys.time()), append = FALSE) %>%
-    header_set("X-Mailer", paste("{emayili}", packageVersion("emayili"), sep = "-"), append = FALSE) %>%
     header_set("MIME-Version", "1.0", append = FALSE)
 
   if (!is.null(to)) koevert <- to(koevert, to)
